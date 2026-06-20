@@ -1,0 +1,122 @@
+<!doctype html>
+<html data-theme="night">
+  <head>
+    <title>404 - Page not found | Intense</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://4a6ttn.mimo.run/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/katorlys/prism-theme-github/themes/prism-theme-github-dark.css">
+  </head>
+
+
+
+
+
+  
+  <body>
+    <header id="nav"></header>
+    
+    <div class="hero bg-base-200 min-h-screen">
+      <div class="hero-content text-center">
+        <div class="max-w-md">
+          <h1 class="text-6xl font-bold leading-[1.25]"><i id="changeemoji" style="color: rgb(255, 212, 59);" class="fa-solid fa-face-frown"></i><br>404</h1>
+          <p class="py-6">
+            <strong>Page not found.</strong><br>
+            The requested page was not found. I am sorry for that.
+          </p>
+          <a class="btn btn-primary" href="index.html"><i class="fa-solid fa-arrow-left"></i> Go back</a>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <footer id="footer"></footer>
+
+
+<script src="script.js"></script>
+    <style>
+
+/* Animation */
+
+.pop {
+
+  transform: scale(0.6);
+
+  opacity: 0;
+
+}
+
+.pop-active {
+
+  transition: transform 0.25s ease, opacity 0.25s ease;
+
+  transform: scale(1);
+
+  opacity: 1;
+
+}
+
+</style>
+    <script>
+      const emojis = [
+
+  "fa-solid fa-face-frown",
+
+  "fa-solid fa-face-tired",
+
+  "fa-solid fa-face-sad-cry"
+
+];
+
+let index = 0;
+
+const el = document.getElementById("changeemoji");
+
+function changeEmoji() {
+
+  // Pop-out
+
+  el.classList.remove("pop-active");
+
+  el.classList.add("pop");
+
+  setTimeout(() => {
+
+    // Klasse wechseln
+
+    index = (index + 1) % emojis.length;
+
+    el.className = emojis[index] + " pop";
+
+    // Pop-in
+
+    requestAnimationFrame(() => {
+
+      el.classList.remove("pop");
+
+      el.classList.add("pop-active");
+
+    });
+
+  }, 200);
+
+}
+
+// Initial Animation aktivieren
+
+el.classList.add("pop-active");
+
+// Alle 3 Sekunden wechseln
+
+setInterval(changeEmoji, 3000);
+    </script>
+  </body>
+</html>
