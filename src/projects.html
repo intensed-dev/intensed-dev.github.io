@@ -1,0 +1,86 @@
+<!doctype html>
+<html data-theme="night">
+  <head>
+    <title>Projects | Intense</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://4a6ttn.mimo.run/0.5.0.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/katorlys/prism-theme-github/themes/prism-theme-github-dark.css"
+    />
+  </head>
+
+  <body>
+    <header id="nav"></header>
+    <div class="relative hero bg-base-200 min-h-screen">
+      <div
+        class="badge badge-soft badge-info text-center absolute top-[20px] left-1/2 -translate-x-1/2 text-nowrap overlay-badge"
+      >
+        <i class="fa-solid fa-flask"></i> Projects are experimental.
+        <a class="underline" onclick="experimental_1.showModal()">Learn more</a>
+      </div>
+      <dialog id="experimental_1" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+          <h3 class="text-lg font-bold">About Experimental Builds</h3>
+          <p class="py-4">
+            Some Pages and Features on my Website are
+            <span class="underline">experimental</span>. This means that these
+            features/pages are still in early development.
+          </p>
+          <div class="modal-action">
+            <form method="dialog">
+              <button class="btn">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+      <div class="hero-content text-center">
+        <div class="max-w-md">
+          <h1 class="text-5xl font-bold">
+            <i
+              class="fa-solid fa-hammer fa-beat-fade"
+              style="color: rgb(255, 212, 59)"
+            ></i>
+            We're still building here
+          </h1>
+          <p class="py-6">
+            <strong>Please come back a little bit later.</strong><br />
+            Thanks for understanding!
+          </p>
+          <a class="btn btn-primary" href="index.html"
+            ><i class="fa-solid fa-arrow-left"></i> Back Home</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <footer id="footer"></footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
