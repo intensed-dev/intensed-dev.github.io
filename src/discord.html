@@ -1,0 +1,101 @@
+<!doctype html>
+<html data-theme="night">
+  <head>
+    <title>Discord | Intense</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://4a6ttn.mimo.run/0.5.0.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/katorlys/prism-theme-github/themes/prism-theme-github-dark.css"
+    />
+  </head>
+
+  <body>
+    <header id="nav"></header>
+    <div class="relative hero bg-base-200 min-h-screen">
+      <div class="hero-content text-center mt-30">
+        <div class="max-w-md">
+          <h1 class="text-5xl font-bold">
+            <i
+              class="fa-solid fa-hand fa-beat-fade"
+              style="color: rgb(255, 212, 59)"
+            ></i>
+            Hang on a second
+          </h1>
+          <p class="py-6">
+            <strong>You are about to join the official server for my stuff.</strong><br />
+            To work against spam and raids, please use the support channels to ask for support, not #general!
+            <ul>
+              <li>- Please use the support channels to ask for support. These are intended to give you the fastest response.</li>
+              <li>- Read the guidelines in #rules-and-info before joining the server.</li>
+            </ul><br>
+            <i class="fa-solid fa-triangle-exclamation"></i> We may remove new users who fail to follow these guidelines.
+          </p>
+          <div class="divider"></div>
+          <label class="label">
+            <input type="checkbox" id="eula" class="checkbox" />
+            I accept Minecraft's <a href="https://www.minecraft.net/en_us/eula" class="underline">EULA</a>
+          </label>
+          <label class="label">
+            <input type="checkbox" id="tos" class="checkbox">
+            I accept Discord's <a href="https://discord.com/terms" class="underline">Terms of Service</a>
+          </label>
+          <label class="label">
+            <input type="checkbox" id="guidelines" class="checkbox">
+            I will follow these guidelines and rules
+          </label>
+          <br/><br/>
+          <button class="btn btn-primary" onclick="window.location.href = 'https://discord.gg/mszTMk84rX'" id="join">
+          <i class="fa-solid fa-arrow-right-to-bracket"></i> Join Discord</button>
+        </div>
+      </div>
+    </div>
+
+    <footer id="footer"></footer>
+
+    <script src="script.js"></script>
+    <script>
+const tos = document.getElementById('tos');
+const eula = document.getElementById('eula');
+const guidelines = document.getElementById('guidelines');
+const joinBtn = document.getElementById('join');
+
+function updateButtonState() {
+    joinBtn.disabled = !(tos.checked && eula.checked && guidelines.checked);
+}
+
+// ❗ OHNE () – sonst wird es sofort ausgeführt
+[tos, eula, guidelines].forEach(cb => {
+    cb.addEventListener('change', updateButtonState);
+});
+
+// Initial Zustand setzen
+updateButtonState();
+</script>
+  </body>
+</html>
