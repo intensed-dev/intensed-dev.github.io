@@ -4,14 +4,14 @@ const footer = document.getElementById("footer");
 //const discord = "https://discord.gg/mszTMk84rX";
 const discord = "discord.html";
 const fontawesome = "https://fontawesome.com";
-const mysite = "https://qq77le.mimo.run/index.html";
-const keyframecss = "https://lyxlsj.mimo.run/index.html";
+const mysite = "intensed-dev.github.io";
+const keyframecss = "intensed-dev.github.io/KeyframeCSS";
 
 const home = "index.html";
-const projects = "projects.html";
-const projects_en = "404.html";
-const projects_mysite = "404.html";
-const echosmp = "echosmp.html";
+const projects = "src/projects.html";
+const projects_en = "src/404.html";
+const projects_mysite = "src/404.html";
+const echosmp = "src/echosmp.html";
 
 const done = 26;
 
