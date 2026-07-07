@@ -1,0 +1,59 @@
+@font-face {
+    font-family: "San Orien";
+    src: url("https://cdn.jsdelivr.net/gh/intensed-dev/SO-Pro@main/fonts/SO_Pro-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "San Orien";
+    src: url("https://cdn.jsdelivr.net/gh/intensed-dev/SO-Pro@main/fonts/SO_Pro-Light-Italic.ttf") format("truetype");
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "San Orien";
+    src: url("https://cdn.jsdelivr.net/gh/intensed-dev/SO-Pro@main/fonts/SO_Pro-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "San Orien";
+    src: url("https://cdn.jsdelivr.net/gh/intensed-dev/SO-Pro@main/fonts/SO_Pro-Regular-Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "San Orien";
+    src: url("https://cdn.jsdelivr.net/gh/intensed-dev/SO-Pro@main/fonts/SO_Pro-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "San Orien";
+    src: url("https://cdn.jsdelivr.net/gh/intensed-dev/SO-Pro@main/fonts/SO_Pro-Bold-Italic.ttf") format("truetype");
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "San Orien";
+    src: url("https://cdn.jsdelivr.net/gh/intensed-dev/SO-Pro@main/fonts/SO_Pro-Black.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "San Orien";
+    src: url("https://cdn.jsdelivr.net/gh/intensed-dev/SO-Pro@main/fonts/SO_Pro-Black-Italic.ttf") format("truetype");
+    font-weight: 900;
+    font-style: italic;
+}
+
+body {
+    font-family: "San Orien", sans-serif;
+}
