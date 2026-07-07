@@ -1,7 +1,7 @@
 var headerEl = document.getElementById("header");
 
 function loadComponents() {
-  headerEl.innerHTML = "";
+  headerEl.innerHTML = HeaderComponent;
 }
 
 loadComponents();
