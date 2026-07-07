@@ -1,3 +1,61 @@
+@plugin "daisyui/theme" {
+  name: "maintheme";
+  default: true;
+  prefersdark: false;
+  color-scheme: "light";
+
+  /* Backgrounds */
+  --color-base-100: oklch(98.8% 0.003 255);
+  --color-base-200: oklch(96.8% 0.003 255);
+  --color-base-300: oklch(93.8% 0.003 255);
+  --color-base-content: oklch(24% 0.004 255);
+
+  /* Apple Blue (#007AFF) */
+  --color-primary: oklch(62% 0.22 255);
+  --color-primary-content: oklch(99% 0.002 255);
+
+  /* Secondary */
+  --color-secondary: oklch(67% 0.04 250);
+  --color-secondary-content: oklch(99% 0.002 255);
+
+  /* Accent */
+  --color-accent: oklch(82% 0.03 220);
+  --color-accent-content: oklch(25% 0.004 255);
+
+  /* Neutral */
+  --color-neutral: oklch(30% 0.005 255);
+  --color-neutral-content: oklch(98% 0.002 255);
+
+  /* Semantic */
+  --color-info: oklch(70% 0.18 245);
+  --color-info-content: oklch(98% 0.002 255);
+
+  --color-success: oklch(72% 0.17 155);
+  --color-success-content: oklch(98% 0.002 255);
+
+  --color-warning: oklch(82% 0.16 85);
+  --color-warning-content: oklch(25% 0.01 85);
+
+  --color-error: oklch(66% 0.22 25);
+  --color-error-content: oklch(98% 0.002 255);
+
+  /* Shape */
+  --radius-selector: 1.25rem;
+  --radius-field: 1rem;
+  --radius-box: 1.5rem;
+
+  /* Size */
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+
+  /* Borders */
+  --border: 1px;
+
+  /* Flat look */
+  --depth: 0;
+  --noise: 0;
+}
+
 @font-face {
     font-family: "San Orien";
     src: url("https://cdn.jsdelivr.net/gh/intensed-dev/SO-Pro@main/fonts/SO_Pro-Light.ttf") format("truetype");
