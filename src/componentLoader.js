@@ -31,6 +31,16 @@ const renderProjects = () => {
         <article class="reveal project-card project-card-${project.tone}" style="--delay:${index * 90}ms">
           <p class="text-sm font-semibold opacity-70">${project.kicker}</p>
           <h3>${project.title}</h3>
+          <div class="reveal mt-9 flex flex-wrap items-center gap-3">
+            <a href="${project.links.repo}" class="btn rounded-full border-0 bg-neutral-950 px-6 text-white hover:bg-neutral-800">
+              ${icon("arrow-down-right", "h-4 w-4")}
+              GitHub
+            </a>
+            <a href="${project.links.other.src}" class="btn btn-ghost rounded-full px-6 text-neutral-800">
+              ${icon(project.links.other.icon, "h-4 w-4")}
+              ${project.links.other.title}
+            </a>
+          </div>
           <p>${project.summary}</p>
           <div class="mt-auto flex flex-wrap gap-2">${project.tags.map(tagTemplate).join("")}</div>
         </article>
