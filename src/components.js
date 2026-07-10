@@ -168,7 +168,7 @@ const ContactComponent = `
     <div class="mx-auto max-w-5xl px-5 text-center md:px-8">
       <p class="eyebrow reveal text-white/55">Contact</p>
       <h2 class="reveal text-balance text-5xl font-black leading-none sm:text-7xl">Make it intense. Keep it effortless.</h2>
-      <p class="reveal mx-auto mt-7 max-w-2xl text-lg leading-8 text-white/65">My mission is to make the internet into a better place. I'll provide as many developer tools as I can.</p>
+      <p class="reveal mx-auto mt-7 max-w-2xl text-lg leading-8 text-white/65">My mission is to make the internet a better place. I'll provide as many developer tools as I can.</p>
       <div class="reveal mt-10 flex flex-wrap justify-center gap-3">
         <a href="https://discord.com/login" class="btn rounded-full border-0 bg-white px-7 text-neutral-950 hover:bg-white/90">
           ${icon("mail", "h-4 w-4")}
