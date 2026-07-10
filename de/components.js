@@ -14,12 +14,12 @@ const siteContent = {
     {
       title: "Website",
       kicker: "GitHub Pages",
-      summary: "The Website you're looking at right now.",
+      summary: "Die Website, die du gerade ansiehst.",
       tags: ["HTML", "Tailwind", "DaisyUI"],
       links: {
         repo: "https://github.io/intensed-dev/intensed-dev.github.io",
         other: {
-          title: "Visit",
+          title: "Ansehen",
           src: "https://intensed-dev.github.io",
           icon: "play"
         }
@@ -28,8 +28,8 @@ const siteContent = {
     },
     {
       title: "KeyframeCSS",
-      kicker: "Utility Animations",
-      summary: "Easy & Tailwind-compatible CSS classes for beautiful, fluid animations.",
+      kicker: "Utility Animationen",
+      summary: "Einfache & Tailwind-kompatible CSS Klassen für schöne, flüssige Animationen.",
       tags: ["CSS", "Animations", "Performance"],
       links: {
         repo: "https://github.io/intensed-dev/KeyframeCSS",
@@ -49,7 +49,7 @@ const siteContent = {
       links: {
         repo: "https://github.io/intensed-dev",
         other: {
-          title: "Visit",
+          title: "Ansehen",
           src: "https://intensed-dev.github.io",
           icon: "play"
         }
@@ -60,7 +60,7 @@ const siteContent = {
   services: [
     {
       icon: "sparkles",
-      title: "No generative AI",
+      title: "Keine generative KI",
       text: "I wont use generative AIs like Claude Code, Codex, ChatGPT or other LLMs to generate whole websites.",
     },
     {
