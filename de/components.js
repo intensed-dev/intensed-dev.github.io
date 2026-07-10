@@ -61,7 +61,7 @@ const siteContent = {
     {
       icon: "sparkles",
       title: "Keine generative KI",
-      text: "Ich werde keine generativen KIs wie Codex, Claude Code oder ChatGPT oder ander LLMs, um ganze Websites zz generieren,",
+      text: "Ich werde keine generativen KIs wie Codex, Claude Code, ChatGPT oder andere LLMs verwenden, um ganze Websites zu generieren.",
     },
     {
       icon: "layers-3",
@@ -108,10 +108,10 @@ const HeroComponent = `
     </div>
     <div class="mx-auto grid min-h-[calc(92svh-3.5rem)] max-w-7xl content-center gap-12 px-5 py-20 md:grid-cols-[0.92fr_1.08fr] md:px-8">
       <div class="max-w-3xl self-center">
-        <p class="reveal mb-5 text-sm font-semibold uppercase text-neutral-500">Web experiences for people who notice details.</p>
+        <p class="reveal mb-5 text-sm font-semibold uppercase text-neutral-500">Web-Erlebnisse für Menschen, die auf Details achten.</p>
         <h1 class="reveal text-balance text-5xl font-black leading-[0.95] text-neutral-950 sm:text-6xl lg:text-8xl">
           Intensed.
-          <span class="block text-neutral-500">Designed to feel inevitable.</span>
+          <span class="block text-neutral-500">So gestaltet, dass es sich unausweichlich anfühlt.</span>
         </h1>
         <p class="reveal mt-7 max-w-2xl text-pretty text-lg leading-8 text-neutral-600 md:text-xl">
           Ich bin ein Student, Entwickler und Entwicklungsleiter bei Kryphic Games.
