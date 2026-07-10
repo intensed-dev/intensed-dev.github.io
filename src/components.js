@@ -6,7 +6,7 @@ const siteContent = {
     { label: "Kontakt", href: "#contact" },
   ],
   heroMetrics: [
-    { value: "Kryphic", label: "Lead developer at" },
+    { value: "5+", label: "Years of Experience" },
     { value: "~2h", label: "Responsetimes" },
     { value: "13+", label: "Projects" },
   ],
