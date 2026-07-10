@@ -2,6 +2,7 @@
 | Part | English | German | Greek | Russian |
 |:----:|:-------:|:------:|:-----:|:-------:|
 | Contributors | @intensed-dev | @intensed-dev |  |  |
+| index | 100% | 100% | 0% | 0% |
 | Header | 100% | 0% | 0% | 0% |
 | Footer | 100% | 0% | 0% | 0% |
 | Hero | 100% | 0% | 0% | 0% |
