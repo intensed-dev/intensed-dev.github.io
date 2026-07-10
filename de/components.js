@@ -44,7 +44,7 @@ const siteContent = {
     {
       title: "FaST SDK",
       kicker: "BETA ∙ Performances",
-      summary: "FaST speeds up your loading times of websites by using javascript to prioritize what's fastest.",
+      summary: "FaST verschnellert die Ladezeiten von Websites durch JavaScript, um Ladezeiten zu priorisieren.",
       tags: ["JavaScript", "Frontend", "Performance"],
       links: {
         repo: "https://github.io/intensed-dev",
@@ -61,24 +61,24 @@ const siteContent = {
     {
       icon: "sparkles",
       title: "Keine generative KI",
-      text: "I wont use generative AIs like Claude Code, Codex, ChatGPT or other LLMs to generate whole websites.",
+      text: "Ich werde keine generativen KIs wie Codex, Claude Code oder ChatGPT oder ander LLMs, um ganze Websites zz generieren,",
     },
     {
       icon: "layers-3",
-      title: "Deep Experience",
-      text: "I can code since I can think, and my experience is guiding my way into the future, and I can trust her.",
+      title: "Lange Erfahrung",
+      text: "Ich kann coden seit ich denken kann und meine Erfahrung, der ich vertraue, leitet mir den Weg in die Zukunft.",
     },
     {
       icon: "gauge",
-      title: "Developer Tools",
-      text: "Coding should be easier, more efficient and faster. I will try to make a many good Developer SDKs as possible.",
+      title: "Entwickler Tools",
+      text: "Entwickeln sollte einfacher, einladender und schneller sein. Ich werde deswegen mein bestes versuchen, um so viele Entwickler-SDKs wie möglich zu entwickeln.",
     },
   ],
   stack: ["HTML", "CSS", "JavaScript", "Tailwind CSS", "KeyframeCSS", "Swift", "GitHub Pages"],
   timeline: [
-    { year: "01", title: "Define", text: "Selecting Positioning, Sitestructure and Componentgrid." },
-    { year: "02", title: "Craft", text: "Crafting Materials, Motion and responsive Details." },
-    { year: "03", title: "Ship", text: "Deploying static websites and expanding iterative details." },
+    { year: "2020", title: "Der Start", text: "Erste Erfahrungen mit Godot und HTML" },
+    { year: "2024", title: "Entwicklung", text: "Verbessern meiner Fähigkeiten und Abschluss meines Frontend Zertifikats." },
+    { year: "2026", title: "Shippen", text: "Lange Erfahrung mit Frontend, GDScript und Design, um meine Kenntnisse zu verbessern." },
   ],
 };
 
@@ -94,7 +94,7 @@ const HeaderComponent = `
       <div class="hidden items-center gap-7 text-sm text-neutral-700 md:flex" data-nav-links></div>
       <a href="#contact" class="btn btn-sm rounded-full border-0 bg-neutral-950 px-4 text-white hover:bg-neutral-800">
         ${icon("send", "h-4 w-4")}
-        Contact
+        Kontakt
       </a>
     </nav>
   </header>
@@ -114,16 +114,16 @@ const HeroComponent = `
           <span class="block text-neutral-500">Designed to feel inevitable.</span>
         </h1>
         <p class="reveal mt-7 max-w-2xl text-pretty text-lg leading-8 text-neutral-600 md:text-xl">
-          I'm a high school student, frontend developer and Lead Developer at Kryphic Games.
+          Ich bin ein Student, Entwickler und Entwicklungsleiter bei Kryphic Games.
         </p>
         <div class="reveal mt-9 flex flex-wrap items-center gap-3">
           <a href="#work" class="btn rounded-full border-0 bg-neutral-950 px-6 text-white hover:bg-neutral-800">
             ${icon("arrow-down-right", "h-4 w-4")}
-            View my Work
+            Meine Arbeiten ansehen
           </a>
           <a href="#studio" class="btn btn-ghost rounded-full px-6 text-neutral-800">
             ${icon("play", "h-4 w-4")}
-            Values
+            Werte
           </a>
         </div>
       </div>
@@ -153,8 +153,8 @@ const ProjectsComponent = `
   <section id="work" class="section-pad bg-neutral-950 text-white">
     <div class="mx-auto max-w-7xl px-5 md:px-8">
       <div class="section-heading reveal">
-        <p class="eyebrow text-white/55">Work & Projects</p>
-        <h2 class="text-balance text-4xl font-black leading-tight sm:text-6xl">Built like a product launch. Maintained like a simple website.</h2>
+        <p class="eyebrow text-white/55">Arbeiten & Projekte</p>
+        <h2 class="text-balance text-4xl font-black leading-tight sm:text-6xl">Entwickelt wie ein Produktlaunch. Gebaut wie eine statische Website.</h2>
       </div>
       <div class="mt-12 grid gap-5 lg:grid-cols-3" data-projects></div>
     </div>
@@ -166,8 +166,8 @@ const StudioComponent = `
     <div class="mx-auto grid max-w-7xl gap-12 px-5 md:grid-cols-[0.85fr_1.15fr] md:px-8">
       <div class="reveal">
         <p class="eyebrow">Values & Studio</p>
-        <h2 class="text-balance text-4xl font-black leading-tight text-neutral-950 sm:text-6xl">Calm surface. Serious engineering underneath.</h2>
-        <p class="mt-6 text-lg leading-8 text-neutral-600">Steve Jobs once said: <em>"Design is not just how it looks. Design is how it works."</em> I am trying my best to fullfil this mission.</p>
+        <h2 class="text-balance text-4xl font-black leading-tight text-neutral-950 sm:text-6xl">Ruhige Oberflächen. Ernsthafte Entwicklung darunter.</h2>
+        <p class="mt-6 text-lg leading-8 text-neutral-600">Steve Jobs sagte einmal: <em>"Design ist nicht nur wie es aussieht. Design ist wie es funktioniert."</em> Ich werde mein bestes versuchen, diese Mission zu erfüllen.</p>
       </div>
       <div class="grid gap-4" data-services></div>
     </div>
@@ -179,7 +179,7 @@ const StackComponent = `
     <div class="mx-auto max-w-7xl px-5 md:px-8">
       <div class="section-heading reveal">
         <p class="eyebrow">Stack & Tools</p>
-        <h2 class="text-balance text-4xl font-black leading-tight text-neutral-950 sm:text-6xl">Simple tools, polished output.</h2>
+        <h2 class="text-balance text-4xl font-black leading-tight text-neutral-950 sm:text-6xl">Einfache Tools, polierte Ergebnisse.</h2>
       </div>
       <div class="reveal mt-10 flex flex-wrap gap-3" data-stack></div>
       <div class="mt-16 grid gap-5 md:grid-cols-3" data-timeline></div>
@@ -190,9 +190,9 @@ const StackComponent = `
 const ContactComponent = `
   <section id="contact" class="section-pad bg-neutral-950 text-white">
     <div class="mx-auto max-w-5xl px-5 text-center md:px-8">
-      <p class="eyebrow reveal text-white/55">Contact</p>
-      <h2 class="reveal text-balance text-5xl font-black leading-none sm:text-7xl">Make it intense. Keep it effortless.</h2>
-      <p class="reveal mx-auto mt-7 max-w-2xl text-lg leading-8 text-white/65">My mission is to make the internet a better place. I'll provide as many developer tools as I can.</p>
+      <p class="eyebrow reveal text-white/55">Kontakt</p>
+      <h2 class="reveal text-balance text-5xl font-black leading-none sm:text-7xl">Mach es intens. Halte es mühelos.</h2>
+      <p class="reveal mx-auto mt-7 max-w-2xl text-lg leading-8 text-white/65">Meine Mission ist es, das Internet zu einem besseren Ort zu machen. Ich werde so viele Entwicklertools wie möglich bereitstellen.</p>
       <div class="reveal mt-10 flex flex-wrap justify-center gap-3">
         <a href="https://discord.com/login" class="btn rounded-full border-0 bg-white px-7 text-neutral-950 hover:bg-white/90">
           ${icon("mail", "h-4 w-4")}
