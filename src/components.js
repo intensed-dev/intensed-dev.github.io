@@ -12,9 +12,9 @@ const siteContent = {
   ],
   projects: [
     {
-      title: "Launch Pages",
+      title: "Website",
       kicker: "GitHub Pages",
-      summary: "Statische Websites mit präziser Dramaturgie, klarer Struktur und minimalem Wartungsaufwand.",
+      summary: "The Website you're looking at right now.",
       tags: ["HTML", "Tailwind", "DaisyUI"],
       tone: "light",
     },
@@ -46,8 +46,8 @@ const siteContent = {
     },
     {
       icon: "gauge",
-      title: "Fast Pages",
-      text: "No Building, No talking: I will get started when I'm ready, and proceed until I am done. At least I try :)",
+      title: "Developer Tools",
+      text: "Coding should be easier, more efficient and faster. I will try to make a many good Developer SDKs as possible.",
     },
   ],
   stack: ["HTML", "CSS", "JavaScript", "Tailwind CSS", "KeyframeCSS", "Swift", "GitHub Pages"],
@@ -166,9 +166,9 @@ const StackComponent = `
 const ContactComponent = `
   <section id="contact" class="section-pad bg-neutral-950 text-white">
     <div class="mx-auto max-w-5xl px-5 text-center md:px-8">
-      <p class="eyebrow reveal text-white/55">Kontakt</p>
+      <p class="eyebrow reveal text-white/55">Contact</p>
       <h2 class="reveal text-balance text-5xl font-black leading-none sm:text-7xl">Make it intense. Keep it effortless.</h2>
-      <p class="reveal mx-auto mt-7 max-w-2xl text-lg leading-8 text-white/65">My mission is to make the internet</p>
+      <p class="reveal mx-auto mt-7 max-w-2xl text-lg leading-8 text-white/65">My mission is to make the internet into a better place. I'll provide as many developer tools as I can.</p>
       <div class="reveal mt-10 flex flex-wrap justify-center gap-3">
         <a href="https://discord.com/login" class="btn rounded-full border-0 bg-white px-7 text-neutral-950 hover:bg-white/90">
           ${icon("mail", "h-4 w-4")}
