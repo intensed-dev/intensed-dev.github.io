@@ -1,14 +1,14 @@
 const siteContent = {
   nav: [
-    { label: "Work", href: "#work" },
+    { label: "Arbeiten", href: "#work" },
     { label: "Studio", href: "#studio" },
     { label: "Stack", href: "#stack" },
     { label: "Kontakt", href: "#contact" },
   ],
   heroMetrics: [
-    { value: "5+", label: "Years of Experience" },
-    { value: "~2h", label: "Responsetimes" },
-    { value: "13+", label: "Projects" },
+    { value: "5+", label: "Jahre Erfahrung" },
+    { value: "~2 Std.", label: "Antwort Zeiten" },
+    { value: "13+", label: "Projekte" },
   ],
   projects: [
     {
