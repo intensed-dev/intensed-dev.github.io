@@ -16,6 +16,14 @@ const siteContent = {
       kicker: "GitHub Pages",
       summary: "The Website you're looking at right now.",
       tags: ["HTML", "Tailwind", "DaisyUI"],
+      links: {
+        repo: "https://github.io/intensed-dev/intensed-dev.github.io",
+        other: {
+          title: "Visit",
+          src: "https://intensed-dev.github.io",
+          icon: "play"
+        }
+      },
       tone: "light",
     },
     {
@@ -23,6 +31,14 @@ const siteContent = {
       kicker: "Utility Animations",
       summary: "Easy & Tailwind-compatible CSS classes for beautiful, fluid animations.",
       tags: ["CSS", "Animations", "Performance"],
+      links: {
+        repo: "https://github.io/intensed-dev/KeyframeCSS",
+        other: {
+          title: "Website",
+          src: "https://intensed-dev.github.io/KeyframeCSS",
+          icon: "globe"
+        }
+      },
       tone: "dark",
     },
     {
@@ -30,6 +46,14 @@ const siteContent = {
       kicker: "BETA ∙ Performances",
       summary: "FaST speeds up your loading times of websites by using javascript to prioritize what's fastest.",
       tags: ["JavaScript", "Frontend", "Performance"],
+      links: {
+        repo: "https://github.io/intensed-dev",
+        other: {
+          title: "Visit",
+          src: "https://intensed-dev.github.io",
+          icon: "play"
+        }
+      },
       tone: "light",
     },
   ],
