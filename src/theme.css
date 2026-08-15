@@ -2,8 +2,6 @@
 @plugin "daisyui/theme" {
   name: "wrapped.style";
   default: true;
-  prefersdark: true;
-  color-scheme: "dark";
   --color-base-100: oklch(13% 0.028 261.692);
   --color-base-200: oklch(21% 0.034 264.665);
   --color-base-300: oklch(27% 0.033 256.848);
