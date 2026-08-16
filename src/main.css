@@ -2,7 +2,7 @@
 @import url("./theme.css");
 
 
-* {
+*, body {
   border-radius: var(--radius);
   border: var(--border);
   border-bottom: var(--border-bottom);
