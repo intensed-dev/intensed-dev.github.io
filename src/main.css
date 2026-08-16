@@ -4,12 +4,15 @@
 
 *, body {
   border-radius: var(--radius);
-  border: var(--border) solid;
-  border-bottom: var(--border-bottom);
 }
 
 body {
   font-family: var(--font);
+}
+
+.btn {
+  border: var(--border) solid;
+  border-bottom: var(--border-bottom);
 }
 
 .title {
