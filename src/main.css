@@ -4,7 +4,7 @@
 
 *, body {
   border-radius: var(--radius);
-  border: var(--border);
+  border: var(--border) solid;
   border-bottom: var(--border-bottom);
 }
 
@@ -14,4 +14,8 @@ body {
 
 .title {
   font-family: var(--font-title);
+}
+
+.btn-primary .btn-soft {
+  border-color: var(--color-primary);
 }
