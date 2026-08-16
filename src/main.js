@@ -7,7 +7,7 @@ function load() {
     <p class="py-4">Looks like you've clicked on an external link. Are you sure you want to open it?</p>
   </div>
   <form method="dialog" class="modal-backdrop">
-    <button class="btn btn-primary">Cancel</button>
+    <button class="btn-success">Cancel</button>
   </form>
 </dialog>
   `;
