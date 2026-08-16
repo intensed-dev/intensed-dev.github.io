@@ -2,5 +2,6 @@
   --radius: 0;
   --border: 2px;
   --border-bottom: 4px;
-  --fonts: "MCSeven", MCSeven, "Mona Sans", Mona Sans, "Inter", Inter, -system-ui, system-ui, sans-serif;
+  --font: "MCSeven", MCSeven, "Mona Sans", Mona Sans, "Inter", Inter, -system-ui, system-ui, sans-serif;
+  --font-title: "MCTen", MCTen, "MCSeven", MCSeven, "Mona Sans", Mona Sans, "Inter", Inter, -system-ui, system-ui, sans-serif;
 }
