@@ -23,3 +23,31 @@ body {
   border: var(--border) solid var(--color-primary);
   border-bottom: var(--border-bottom) solid var(--color-primary);
 }
+.btn-secondary {
+  border: var(--border) solid var(--color-secondary);
+  border-bottom: var(--border-bottom) solid var(--color-secondary);
+}
+.btn-accent {
+  border: var(--border) solid var(--color-accent);
+  border-bottom: var(--border-bottom) solid var(--color-accent);
+}
+.btn-neutral {
+  border: var(--border) solid var(--color-neutral);
+  border-bottom: var(--border-bottom) solid var(--color-neutral);
+}
+.btn-info {
+  border: var(--border) solid var(--color-info);
+  border-bottom: var(--border-bottom) solid var(--color-info);
+}
+.btn-success {
+  border: var(--border) solid var(--color-success);
+  border-bottom: var(--border-bottom) solid var(--color-success);
+}
+.btn-warning {
+  border: var(--border) solid var(--color-warning);
+  border-bottom: var(--border-bottom) solid var(--color-warning);
+}
+.btn-error {
+  border: var(--border) solid var(--color-error);
+  border-bottom: var(--border-bottom) solid var(--color-error);
+}
