@@ -43,3 +43,11 @@ const footer = `
   </nav>
 </footer>
 `;
+
+
+function load() {
+  document.getElementById("footer").innerHTML = footer;
+}
+
+load();
+
