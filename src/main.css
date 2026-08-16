@@ -12,7 +12,7 @@ body {
 
 .btn-soft {
   border: var(--border) solid;
-  border-bottom: var(--border-bottom);
+  border-bottom: var(--border-bottom) solid;
 }
 
 .title {
