@@ -16,6 +16,6 @@ body {
   font-family: var(--font-title);
 }
 
-.btn-primary .btn-soft {
-  border-color: var(--color-primary);
+.btn-soft {
+  border: var(--border) solid var(--color-primary);
 }
