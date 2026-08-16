@@ -21,4 +21,5 @@ body {
 
 .btn-primary {
   border: var(--border) solid var(--color-primary);
+  border-bottom: var(--border-bottom) solid var(--color-primary);
 }
