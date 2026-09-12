@@ -1,0 +1,25 @@
+@import './css/themes.css';
+@import './css/fonts.css';
+@import './css/card.css';
+
+
+body {
+    font-family: Inter, "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica Neue, "Helvetica", Helvetica, sans-serif;
+}
+
+.site-main-content {
+    margin-top: 60px;
+    background-color: var(--color-base-300);
+}
+
+.component-external-icon {
+    color: transparent;
+    font-size: 10px;
+    text-decoration: none !important;
+    transition: 0.3s;
+    vertical-align: middle;
+}
+.external:hover .component-external-icon {
+    color: var(--color-neutral-content);
+    background-image: url("assets/test/apple_event.JPG");
+}

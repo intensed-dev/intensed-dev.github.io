@@ -1,0 +1,38 @@
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter/Inter-VariableFont_opsz\,wght.ttf") format("truetype");
+  /*font-weight: 500;*/
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter/Inter-Italic-VariableFont_opsz\,wght.ttf") format("truetype");
+  /*font-weight: 500;*/
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Merriweather";
+  src: url("/fonts/Merriweather/Merriweather-VariableFont_opsz\,wdth\,wght.ttf") format("truetype");
+  /*font-weight: 500;*/
+  font-style: normal;
+}
+@font-face {
+  font-family: "Merriweather";
+  src: url("/fonts/Merriweather/Merriweather-Italic-VariableFont_opsz\,wdth\,wght.ttf") format("truetype");
+  /*font-weight: 500;*/
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/JetBrains_Mono/JetBrainsMono-VariableFont_wght.ttf") format("truetype");
+  /*font-weight: 500;*/
+  font-style: normal;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/JetBrains_Mono/JetBrainsMono-Italic-VariableFont_wght.ttf") format("truetype");
+  /*font-weight: 500;*/
+  font-style: italic;
+}

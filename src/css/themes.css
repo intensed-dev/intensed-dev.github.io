@@ -1,0 +1,135 @@
+:root,
+:root:has(input.theme-controller[value="cs-light"]:checked),
+[data-theme="cs-light"] {
+  color-scheme: "light";
+  --color-base-100: oklch(100% 0 0);
+  --color-base-200: oklch(98% 0 0);
+  --color-base-300: #f5f5f7;
+  --color-base-content: oklch(21% 0.006 285.885);
+  --color-primary: rgb(0 136 255);
+  --color-primary-content: oklch(100% 0 0);
+  --color-secondary: oklch(65% 0.241 354.308);
+  --color-secondary-content: oklch(94% 0.028 342.258);
+  --color-accent: rgb(0 136 255);
+  --color-accent-content: oklch(100% 0 0);
+  --color-neutral: oklch(23.2% 0.004 286.099);
+  --color-neutral-content: oklch(92% 0.004 286.32);
+  --color-info: rgb(0 136 255);
+  --color-info-content: oklch(100% 0 0);
+  --color-success: rgb(52 199 89);
+  --color-success-content: oklch(100% 0 0);
+  --color-warning: rgb(255 204 0);
+  --color-warning-content: oklch(28% 0.066 53.813);
+  --color-error: rgb(255 56 60);
+  --color-error-content: oklch(100% 0 0);
+  --radius-selector: 2rem;
+  --radius-field: 2rem;
+  --radius-box: 2rem;
+  --size-selector: 0.3125rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+
+:root,
+:root:has(input.theme-controller[value="cs-light-contrast"]:checked),
+[data-theme="cs-light-contrast"] {
+  color-scheme: "light";
+  --color-base-100: oklch(100% 0 0);
+  --color-base-200: oklch(98% 0 0);
+  --color-base-300: #f5f5f7;
+  --color-base-content: oklch(21% 0.006 285.885);
+  --color-primary: rgb(0 136 255);
+  --color-primary-content: oklch(100% 0 0);
+  --color-secondary: oklch(65% 0.241 354.308);
+  --color-secondary-content: oklch(94% 0.028 342.258);
+  --color-accent: rgb(0 136 255);
+  --color-accent-content: oklch(100% 0 0);
+  --color-neutral: oklch(23.2% 0.004 286.099);
+  --color-neutral-content: oklch(92% 0.004 286.32);
+  --color-info: rgb(0 136 255);
+  --color-info-content: oklch(100% 0 0);
+  --color-success: rgb(52 199 89);
+  --color-success-content: oklch(100% 0 0);
+  --color-warning: rgb(255 204 0);
+  --color-warning-content: oklch(28% 0.066 53.813);
+  --color-error: rgb(255 56 60);
+  --color-error-content: oklch(100% 0 0);
+  --radius-selector: 2rem;
+  --radius-field: 2rem;
+  --radius-box: 2rem;
+  --size-selector: 0.3125rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+
+:root,
+:root:has(input.theme-controller[value="cs-dark"]:checked),
+[data-theme="cs-dark"] {
+  color-scheme: "dark";
+  --color-base-100: oklch(100% 0 0);
+  --color-base-200: oklch(98% 0 0);
+  --color-base-300: #f5f5f7;
+  --color-base-content: oklch(21% 0.006 285.885);
+  --color-primary: rgb(0 136 255);
+  --color-primary-content: oklch(100% 0 0);
+  --color-secondary: oklch(65% 0.241 354.308);
+  --color-secondary-content: oklch(94% 0.028 342.258);
+  --color-accent: rgb(0 136 255);
+  --color-accent-content: oklch(100% 0 0);
+  --color-neutral: oklch(23.2% 0.004 286.099);
+  --color-neutral-content: oklch(92% 0.004 286.32);
+  --color-info: rgb(0 136 255);
+  --color-info-content: oklch(100% 0 0);
+  --color-success: rgb(52 199 89);
+  --color-success-content: oklch(100% 0 0);
+  --color-warning: rgb(255 204 0);
+  --color-warning-content: oklch(28% 0.066 53.813);
+  --color-error: rgb(255 56 60);
+  --color-error-content: oklch(100% 0 0);
+  --radius-selector: 2rem;
+  --radius-field: 2rem;
+  --radius-box: 2rem;
+  --size-selector: 0.3125rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+
+:root,
+:root:has(input.theme-controller[value="cs-dark-contrast"]:checked),
+[data-theme="cs-dark-contrast"] {
+  color-scheme: "dark";
+  --color-base-100: oklch(100% 0 0);
+  --color-base-200: oklch(98% 0 0);
+  --color-base-300: #f5f5f7;
+  --color-base-content: oklch(21% 0.006 285.885);
+  --color-primary: rgb(0 136 255);
+  --color-primary-content: oklch(100% 0 0);
+  --color-secondary: oklch(65% 0.241 354.308);
+  --color-secondary-content: oklch(94% 0.028 342.258);
+  --color-accent: rgb(0 136 255);
+  --color-accent-content: oklch(100% 0 0);
+  --color-neutral: oklch(23.2% 0.004 286.099);
+  --color-neutral-content: oklch(92% 0.004 286.32);
+  --color-info: rgb(0 136 255);
+  --color-info-content: oklch(100% 0 0);
+  --color-success: rgb(52 199 89);
+  --color-success-content: oklch(100% 0 0);
+  --color-warning: rgb(255 204 0);
+  --color-warning-content: oklch(28% 0.066 53.813);
+  --color-error: rgb(255 56 60);
+  --color-error-content: oklch(100% 0 0);
+  --radius-selector: 2rem;
+  --radius-field: 2rem;
+  --radius-box: 2rem;
+  --size-selector: 0.3125rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}

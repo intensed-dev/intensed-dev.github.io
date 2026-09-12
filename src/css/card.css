@@ -1,0 +1,20 @@
+.showcase-card {
+    width: 100%;
+    min-height: 500px;
+    display: grid;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    place-items: end center;
+    background-color: #6387BF;
+}
+
+.showcase-text {
+    width: 100%;
+    display: grid;
+    text-align: center;
+    margin: 40px;
+    gap: 10px;
+    place-items: center;
+}
