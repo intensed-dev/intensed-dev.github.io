@@ -2,7 +2,6 @@
   import { navigate } from "$lib/transition";
 
   let count = $state(0);
-  
 </script>
 
 <svelte:head>
