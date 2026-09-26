@@ -12,14 +12,14 @@
 
 <main>
   <LoadingOverlay bind:this={loadingoverlay}/>
-  <h1>SvelteKit is ready.</h1>
+  <h1>Help here!</h1>
   <p>Start building your project in <code>src/routes</code>.</p>
 
   <button onclick={() => count++}>
     Clicked {count} {count === 1 ? 'time' : 'times'}
   </button>
 
-  <button onclick={() => loadingoverlay.navigate('/help')}>
-    Reveal!
+  <button onclick={() => loadingoverlay.navigate('/')}>
+    Back Home!
   </button>
 </main>
