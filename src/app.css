@@ -1,7 +1,5 @@
 :root {
-  font-family:
-    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    sans-serif;
+  font-family: Merriweather, "Merriweather", ui-serif, serif;
   color: #111;
   background: #fff;
   font-synthesis: none;
@@ -31,18 +29,13 @@ main {
   text-align: center;
 }
 
-h1,
-p {
-  margin: 0;
-}
+h1,p {margin: 0;}
+p {color: #666;}
 
-p {
-  color: #666;
+code, .code {
+  font-family: JetBrains Mono, "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
-
-code {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-}
+.sans {font-family: Inter, "Inter", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif}
 
 button {
   margin-top: 1rem;
@@ -54,7 +47,4 @@ button {
   font: inherit;
   cursor: pointer;
 }
-
-button:hover {
-  opacity: 0.9;
-}
+button:hover {opacity: 0.9;}
