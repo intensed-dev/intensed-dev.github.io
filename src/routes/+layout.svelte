@@ -4,12 +4,13 @@
 
 <script lang="ts">
   import '../app.css';
+  
   import type { Snippet } from 'svelte';
-  import LoadingOverlay from '$lib/LoadingOverlay.svelte';
-  let loadingoverlay: LoadingOverlay;
+  import Transition from '$lib/Transition.svelte';
 
   let { children }: { children: Snippet } = $props();
 </script>
 
-<LoadingOverlay bind:this={loadingoverlay}/>
+<Transition />
+
 {@render children()}

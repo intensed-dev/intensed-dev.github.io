@@ -1,15 +1,19 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
+	import { registerNavigate, unregisterNavigate } from '$lib/transition';
 
 	let show = true;
 	let duration = 1000;
 	let progress = 100;
 
 	let title = '';
-	let isIntro = true;
 
 	const text = 'Intensed';
+
+	function wait(ms: number) {
+		return new Promise<void>((resolve) => setTimeout(resolve, ms));
+	}
 
 	function animateProgress(from: number, to: number) {
 		return new Promise<void>((resolve) => {
@@ -35,48 +39,35 @@
 	async function typeTitle() {
 		title = '';
 
-		for (let i = 0; i <= text.length; i++) {
+		for (let i = 1; i <= text.length; i++) {
 			title = text.slice(0, i);
-			await new Promise((resolve) => setTimeout(resolve, 600 / text.length));
+			await wait(600 / text.length);
 		}
 	}
 
 	async function intro() {
-		// Overlay erstmal sichtbar lassen
-		await new Promise((resolve) => setTimeout(resolve, duration));
+		show = true;
+		progress = 100;
 
-		// Text schreiben
 		await typeTitle();
+		await wait(200);
 
-		// Hochfahren + Progress gleichzeitig
 		show = false;
 		await animateProgress(100, 0);
 
 		progress = 0;
-		isIntro = false;
 	}
 
-	onMount(() => {
-		intro();
-	});
-
-	export async function navigate(url: string) {
-		// Navigation: kein Text schreiben
-		isIntro = false;
-
+	async function navigate(url: string) {
 		show = true;
 		progress = 0;
 
-		// Runterfahren
 		await animateProgress(0, 100);
 
-		// Seite wechseln
 		await goto(url);
 
-		// Kurz unten bleiben
-		await new Promise((resolve) => setTimeout(resolve, 400));
+		await wait(400);
 
-		// Hochfahren
 		progress = 100;
 		show = false;
 
@@ -84,10 +75,21 @@
 
 		progress = 0;
 	}
+
+	onMount(() => {
+		registerNavigate(navigate);
+		intro();
+
+		return () => {
+			unregisterNavigate();
+		};
+	});
 </script>
 
 <div class:show class="transition" style:--duration={duration}>
-	<h1 class="title">{title}</h1>
+	<h1 class="title">
+		<span class="text">{title}</span><span class="dot">.</span>
+	</h1>
 
 	<progress
 		max="100"
@@ -160,7 +162,13 @@
 
 		font-style: italic;
 		font-size: 60px;
+	}
 
+	.text {
+		color: white;
+	}
+
+	.dot {
 		color: oklch(0.553 0.195 38.402);
 	}
 </style>

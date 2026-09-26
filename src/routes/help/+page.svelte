@@ -1,6 +1,5 @@
 <script lang="ts">
-  import LoadingOverlay from "$lib/LoadingOverlay.svelte";
-  let loadingoverlay: LoadingOverlay;
+  import { navigate } from "$lib/transition";
 
   let count = $state(0);
   
@@ -11,7 +10,6 @@
 </svelte:head>
 
 <main>
-  <LoadingOverlay bind:this={loadingoverlay}/>
   <h1>Help here!</h1>
   <p>Start building your project in <code>src/routes</code>.</p>
 
@@ -19,7 +17,7 @@
     Clicked {count} {count === 1 ? 'time' : 'times'}
   </button>
 
-  <button onclick={() => loadingoverlay.navigate('/')}>
+  <button onclick={() => navigate('/')}>
     Back Home!
   </button>
 </main>
