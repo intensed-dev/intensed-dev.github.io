@@ -1,0 +1,14 @@
+{
+  "socials": [
+    { "name": "GitHub", "handle": "@intensed-dev", "url": "https://github.com/intensed-dev" },
+    { "name": "Modrinth", "handle": "Intense", "url": "https://modrinth.com/user/Intense" },
+    { "name": "Discord", "handle": "Intense", "url": "https://discord.com/" }
+  ],
+  "projects": [
+    { "name": "Rebase", "kind": "web tool", "url": "https://github.com/intensed-dev/rebase" },
+    { "name": "MilkBucket", "kind": "Minecraft tooling", "url": "https://github.com/Modcafe/milkbucket" },
+    { "name": "Fallback", "kind": "Fabric mod", "url": "https://github.com/intensed-dev/fallback" },
+    { "name": "Fishstick", "kind": "GitHub Action", "url": "https://github.com/intensed-dev/fishstick" },
+    { "name": "Intense Collective", "kind": "projects", "url": "https://github.com/intensed-dev" }
+  ]
+}
