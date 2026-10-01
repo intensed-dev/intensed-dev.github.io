@@ -1,14 +1,16 @@
 {
   "socials": [
     { "name": "GitHub", "handle": "@intensed-dev", "url": "https://github.com/intensed-dev" },
-    { "name": "Modrinth", "handle": "Intense", "url": "https://modrinth.com/user/Intense" },
-    { "name": "Discord", "handle": "Intense", "url": "https://discord.com/" }
+    { "name": "Modrinth", "handle": "Intensed", "url": "https://modrinth.com/user/Intensed" },
+    { "name": "Discord", "handle": "Server", "url": "https://intensed-dev.github.io/link/discord" },
+    { "name": "NPM", "handle": "@Intensed", "url": "https://npmjs.com/~intensed" }
   ],
   "projects": [
-    { "name": "Rebase", "kind": "web tool", "url": "https://github.com/intensed-dev/rebase" },
-    { "name": "MilkBucket", "kind": "Minecraft tooling", "url": "https://github.com/Modcafe/milkbucket" },
-    { "name": "Fallback", "kind": "Fabric mod", "url": "https://github.com/intensed-dev/fallback" },
-    { "name": "Fishstick", "kind": "GitHub Action", "url": "https://github.com/intensed-dev/fishstick" },
-    { "name": "Intense Collective", "kind": "projects", "url": "https://github.com/intensed-dev" }
+    { "name": "Rebase", "kind": "web tool • JavaScript", "url": "https://rebase.js.org" },
+    { "name": "Milkbucket", "kind": "CLI tool • JavaScript", "url": "https://github.com/Modcafe/milkbucket" },
+    { "name": "Fallback", "kind": "Fabric mod • Java", "url": "https://modrinth.com/project/fallback" },
+    { "name": "Fishstick", "kind": "GitHub Workflow • Python", "url": "https://github.com/intensed-dev/fishstick" },
+    { "name": "Website", "kind": "My Homepage • Svelte", "url": "https://intensed-dev.github.io" },
+    { "name": "NoFoliage", "kind": "Resource Pack", "url": "https://modrinth.com/project/nofoliage" }
   ]
 }
