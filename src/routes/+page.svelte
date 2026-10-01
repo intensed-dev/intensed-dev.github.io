@@ -30,7 +30,7 @@
   <section class="marquees" aria-label="Socials and projects">
     <div class="marquee marquee-a">
       <div class="marquee-track">
-        {#each [...socials, ...socials] as item, i (item.url + '-' + i)}
+        {#each [...socials, ...socials, ...socials, ...socials] as item, i (item.url + '-' + i)}
           <a class="marquee-item" href={item.url} target="_blank" rel="noreferrer">
             <span>{item.name}</span>
             {#if item.handle}<small>{item.handle}</small>{/if}
@@ -41,7 +41,7 @@
 
     <div class="marquee marquee-b">
       <div class="marquee-track">
-        {#each [...projects, ...projects] as item, i (item.url + '-' + i)}
+        {#each [...projects, ...projects, ...projects, ...projects] as item, i (item.url + '-' + i)}
           <a class="marquee-item" href={item.url} target="_blank" rel="noreferrer">
             <span>{item.name}</span>
             {#if item.kind}<small>{item.kind}</small>{/if}
@@ -52,7 +52,7 @@
 
     <div class="marquee marquee-c">
       <div class="marquee-track">
-        {#each [...allItems, ...allItems] as item, i (item.url + '-' + i)}
+        {#each [...allItems, ...allItems, ...allItems, ...allItems] as item, i (item.url + '-' + i)}
           <a class="marquee-item" href={item.url} target="_blank" rel="noreferrer">
             <span>{item.name}</span>
             <small>{item.kind ?? item.handle ?? 'social'}</small>
