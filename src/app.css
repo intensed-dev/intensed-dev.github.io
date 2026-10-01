@@ -2,43 +2,11 @@
 @import "@fontsource-variable/merriweather";
 
 :root {
-  font-family: Merriweather, "Merriweather", ui-serif, serif;
-  color: #111;
-  background: #fff;
+  font-family: Merriweather, Georgia, serif;
+  color: #fff;
+  background: #000;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.147 0.004 49.3);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.147 0.004 49.3);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.147 0.004 49.3);
-  --primary: oklch(0.553 0.195 38.402);
-  --primary-foreground: oklch(0.98 0.016 73.684);
-  --secondary: oklch(0.967 0.001 286.375);
-  --secondary-foreground: oklch(0.21 0.006 285.885);
-  --muted: oklch(0.96 0.002 17.2);
-  --muted-foreground: oklch(0.547 0.021 43.1);
-  --accent: oklch(0.96 0.002 17.2);
-  --accent-foreground: oklch(0.214 0.009 43.1);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0.005 34.3);
-  --input: oklch(0.922 0.005 34.3);
-  --ring: oklch(0.714 0.014 41.2);
-  --chart-1: oklch(0.837 0.128 66.29);
-  --chart-2: oklch(0.705 0.213 47.604);
-  --chart-3: oklch(0.646 0.222 41.116);
-  --chart-4: oklch(0.553 0.195 38.402);
-  --chart-5: oklch(0.47 0.157 37.304);
-  --radius: 0.875rem;
-  --sidebar: oklch(0.986 0.002 67.8);
-  --sidebar-foreground: oklch(0.147 0.004 49.3);
-  --sidebar-primary: oklch(0.646 0.222 41.116);
-  --sidebar-primary-foreground: oklch(0.98 0.016 73.684);
-  --sidebar-accent: oklch(0.96 0.002 17.2);
-  --sidebar-accent-foreground: oklch(0.214 0.009 43.1);
-  --sidebar-border: oklch(0.922 0.005 34.3);
-  --sidebar-ring: oklch(0.714 0.014 41.2);
 }
 
 * {
@@ -48,69 +16,232 @@
 html,
 body {
   margin: 0;
+  min-width: 320px;
   min-height: 100%;
+  background: #000;
 }
 
 body {
-  min-width: 320px;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 main {
-  min-height: 100vh;
-  display: grid;
-  place-content: center;
-  gap: 0.75rem;
-  padding: 2rem;
-  text-align: center;
+  position: relative;
+  min-height: 100svh;
+  overflow: hidden;
+  background: #000;
 }
 
-h1,
-p {
+.intro {
+  position: relative;
+  z-index: 2;
+  min-height: 55svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: clamp(2rem, 7vw, 7rem);
+  pointer-events: none;
+}
+
+.eyebrow {
+  margin: 0 0 1.5rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  opacity: 0.55;
+}
+
+h1 {
+  max-width: 950px;
   margin: 0;
-}
-p {
-  color: #666;
-}
-
-code,
-.code {
-  font-family:
-    JetBrains Mono,
-    "JetBrains Mono",
-    ui-monospace,
-    SFMono-Regular,
-    Menlo,
-    Monaco,
-    Consolas,
-    monospace;
-}
-.sans {
-  font-family:
-    Inter,
-    "Inter",
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    "Open Sans",
-    "Helvetica Neue",
-    sans-serif;
+  font-size: clamp(3rem, 8vw, 8rem);
+  line-height: 0.94;
+  font-weight: 500;
+  letter-spacing: -0.055em;
 }
 
-button {
-  margin-top: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 0.6rem;
-  background: #111;
+.marquees {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  padding: 2rem 0 8rem;
+  transform: rotate(-2deg) scale(1.04);
+}
+
+.marquee {
+  width: max-content;
+  max-width: none;
+  overflow: hidden;
+  border-block: 1px solid rgba(255, 255, 255, 0.16);
+  background: #000;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 38s linear infinite;
+}
+
+.marquee-b .marquee-track {
+  animation-name: scroll-right;
+  animation-duration: 31s;
+}
+
+.marquee-c .marquee-track {
+  animation-duration: 46s;
+}
+
+.marquee-item {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 1.2rem;
+  padding: 1.1rem 2rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.16);
+  transition:
+    background 160ms ease,
+    color 160ms ease;
+  white-space: nowrap;
+}
+
+.marquee-item span {
+  font-size: clamp(1.2rem, 2.4vw, 2rem);
+}
+
+.marquee-item small {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  opacity: 0.45;
+}
+
+.marquee-item:hover {
+  background: #fff;
+  color: #000;
+}
+
+.popup-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.popup {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 10rem;
+  padding: 1rem 1.15rem;
+  border: 1px solid #fff;
+  background: #000;
   color: #fff;
-  padding: 0.7rem 1rem;
-  font: inherit;
-  cursor: pointer;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) rotate(var(--rotation));
+  animation: popup-in 500ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  transition:
+    background 160ms ease,
+    color 160ms ease;
 }
-button:hover {
-  opacity: 0.9;
+
+.popup:hover {
+  background: #fff;
+  color: #000;
+}
+
+.popup strong {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.popup span {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  opacity: 0.5;
+}
+
+footer {
+  position: absolute;
+  z-index: 6;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-right {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes popup-in {
+  from {
+    opacity: 0;
+    scale: 0.6;
+  }
+
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .intro {
+    min-height: 48svh;
+    padding: 2rem 1.25rem 4rem;
+  }
+
+  .marquee-item {
+    padding: 0.9rem 1.25rem;
+  }
+
+  .marquees {
+    padding-bottom: 6rem;
+  }
+
+  footer {
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation-play-state: paused;
+  }
+
+  .popup {
+    animation: none;
+  }
 }
