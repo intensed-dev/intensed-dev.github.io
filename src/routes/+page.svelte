@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
   import data from '$lib/data.json';
 
   type LinkItem = {
@@ -9,37 +8,9 @@
     url: string;
   };
 
-  let popups = $state<Array<LinkItem & { id: number; x: number; y: number; rotation: number }>>([]);
-  let nextId = 0;
-
   const socials = data.socials as LinkItem[];
   const projects = data.projects as LinkItem[];
   const allItems = [...socials, ...projects];
-
-  function addPopup() {
-    const item = allItems[Math.floor(Math.random() * allItems.length)];
-
-    popups = [
-      ...popups.slice(-7),
-      {
-        ...item,
-        id: nextId++,
-        x: 8 + Math.random() * 84,
-        y: 12 + Math.random() * 72,
-        rotation: -5 + Math.random() * 10
-      }
-    ];
-  }
-
-  onMount(() => {
-    const firstTimer = window.setTimeout(addPopup, 1200);
-    const interval = window.setInterval(addPopup, 2800);
-
-    return () => {
-      window.clearTimeout(firstTimer);
-      window.clearInterval(interval);
-    };
-  });
 </script>
 
 <svelte:head>
@@ -90,21 +61,6 @@
       </div>
     </div>
   </section>
-
-  <div class="popup-layer" aria-hidden="true">
-    {#each popups as item (item.id)}
-      <a
-        class="popup"
-        href={item.url}
-        target="_blank"
-        rel="noreferrer"
-        style={`left: ${item.x}%; top: ${item.y}%; --rotation: ${item.rotation}deg`}
-      >
-        <strong>{item.name}</strong>
-        <span>{item.kind ?? item.handle ?? 'link'}</span>
-      </a>
-    {/each}
-  </div>
 
   <footer>
     <span>© {new Date().getFullYear()} Intense</span>
