@@ -98,7 +98,7 @@
         href={item.url}
         target="_blank"
         rel="noreferrer"
-        style:="left: {item.x}%; top: {item.y}%; --rotation: {item.rotation}deg"
+        style={`left: ${item.x}%; top: ${item.y}%; --rotation: ${item.rotation}deg`}
       >
         <strong>{item.name}</strong>
         <span>{item.kind ?? item.handle ?? 'link'}</span>
