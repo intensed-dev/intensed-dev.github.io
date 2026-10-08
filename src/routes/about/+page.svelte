@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
+  import { onMount, tick } from 'svelte';
 
   const API_URL = 'https://about-page-bf01.intensed.workers.dev';
 
@@ -66,6 +66,8 @@
       text = data.text;
       authenticated = true;
       code = '';
+      await tick();
+      updateWords();
     } catch {
       error = 'could not connect to the server.';
     } finally {
