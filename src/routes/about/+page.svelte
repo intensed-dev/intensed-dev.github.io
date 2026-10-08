@@ -90,11 +90,12 @@
   }
 
   h1 {
+    max-width: 950px;
     margin: 0 0 0.6em;
-    font-size: 0.55em;
-    line-height: 1;
+    font-size: clamp(3rem, 8vw, 8rem);
+    line-height: 0.94;
     font-weight: 500;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.055em;
   }
 
   .text {
