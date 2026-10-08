@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
 
-  const API_URL = 'https://dein-worker.workers.dev';
+  const API_URL = 'https://about-page-bf01.intensed.workers.dev';
 
   let code = '';
   let loading = false;
