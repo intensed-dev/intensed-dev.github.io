@@ -2,14 +2,10 @@
   import { onMount } from 'svelte';
 
   const quotes = [
-    { text: 'Not everything worth finding is on the first page.', author: 'Unknown' },
-    { text: 'If it is not here, there is probably something else worth discovering.', author: 'Unknown' },
-    { text: 'Keep looking. The interesting places are rarely the obvious ones.', author: 'Unknown' },
-    { text: 'Wrong turn. Right mindset: keep exploring.', author: 'Unknown' },
-    { text: 'Some paths end so you can find a better one.', author: 'Unknown' },
-    { text: 'You have not found it yet. That is different from it not existing.', author: 'Unknown' },
-    { text: 'A missing page is still a reason to look around.', author: 'Unknown' },
-    { text: 'The search is part of the journey.', author: 'Unknown' }
+    { text: 'Not all those who wander are lost.', author: 'J.R.R. Tolkien' },
+    { text: 'Nothing will work unless you do.', author: 'Maya Angelou' },
+    { text: 'The best way out is always through.', author: 'Robert Frost' },
+    { text: 'Try to be a rainbow in someone’s cloud.', author: 'Maya Angelou' }
   ];
 
   let quote = quotes[0];
