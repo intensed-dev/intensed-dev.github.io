@@ -2,14 +2,14 @@
   import { onMount } from 'svelte';
 
   const quotes = [
-    'Not everything worth finding is on the first page.',
-    'If it is not here, there is probably something else worth discovering.',
-    'Keep looking. The interesting places are rarely the obvious ones.',
-    'Wrong turn. Right mindset: keep exploring.',
-    'Some paths end so you can find a better one.',
-    'You have not found it yet. That is different from it not existing.',
-    'A missing page is still a reason to look around.',
-    'The search is part of the journey.'
+    { text: 'Not everything worth finding is on the first page.', author: 'Unknown' },
+    { text: 'If it is not here, there is probably something else worth discovering.', author: 'Unknown' },
+    { text: 'Keep looking. The interesting places are rarely the obvious ones.', author: 'Unknown' },
+    { text: 'Wrong turn. Right mindset: keep exploring.', author: 'Unknown' },
+    { text: 'Some paths end so you can find a better one.', author: 'Unknown' },
+    { text: 'You have not found it yet. That is different from it not existing.', author: 'Unknown' },
+    { text: 'A missing page is still a reason to look around.', author: 'Unknown' },
+    { text: 'The search is part of the journey.', author: 'Unknown' }
   ];
 
   let quote = quotes[0];
@@ -28,8 +28,11 @@
   <div class="content">
     <p class="code">404</p>
     <h1>nothing here.</h1>
-    <p class="quote">“{quote}”</p>
-    <a href="/">go back</a>
+    <blockquote>
+      <p>“{quote.text}”</p>
+      <cite>— {quote.author}</cite>
+    </blockquote>
+    <a href="/">go back <span aria-hidden="true">→</span></a>
   </div>
 </main>
 
@@ -50,7 +53,7 @@
 
   .code {
     margin: 0 0 1rem;
-    font-size: 0.7rem;
+    font-size: clamp(1.1rem, 3vw, 1.8rem);
     text-transform: uppercase;
     letter-spacing: 0.2em;
     opacity: 0.45;
@@ -64,7 +67,7 @@
     letter-spacing: -0.06em;
   }
 
-  .quote {
+  blockquote {
     max-width: 560px;
     margin: 2rem auto;
     font-size: clamp(1rem, 2vw, 1.35rem);
@@ -72,10 +75,21 @@
     opacity: 0.6;
   }
 
+  blockquote p {
+    margin: 0;
+    font-style: italic;
+  }
+
+  cite {
+    display: block;
+    margin-top: 0.35rem;
+    font-size: 0.85em;
+    font-style: normal;
+  }
+
   a {
     color: #fff;
-    text-decoration: underline;
-    text-underline-offset: 0.3em;
+    text-decoration: none;
     opacity: 0.7;
     transition: opacity 160ms ease;
   }
