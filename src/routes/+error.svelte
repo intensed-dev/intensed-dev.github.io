@@ -5,7 +5,30 @@
     { text: 'Not all those who wander are lost.', author: 'J.R.R. Tolkien' },
     { text: 'Nothing will work unless you do.', author: 'Maya Angelou' },
     { text: 'The best way out is always through.', author: 'Robert Frost' },
-    { text: 'Try to be a rainbow in someone’s cloud.', author: 'Maya Angelou' }
+    { text: 'Try to be a rainbow in someone’s cloud.', author: 'Maya Angelou' },
+    { text: 'The journey of a thousand miles begins with a single step.', author: 'Lao Tzu' },
+    { text: 'Adventure is worthwhile in itself.', author: 'Amelia Earhart' },
+    { text: 'We are all in the gutter, but some of us are looking at the stars.', author: 'Oscar Wilde' },
+    { text: 'It is never too late to be what you might have been.', author: 'George Eliot' },
+    { text: 'Act as if what you do makes a difference. It does.', author: 'William James' },
+    { text: 'The only impossible journey is the one you never begin.', author: 'Tony Robbins' },
+    { text: 'The future depends on what you do today.', author: 'Mahatma Gandhi' },
+    { text: 'There is no substitute for hard work.', author: 'Thomas Edison' },
+    { text: 'Do what you can, with what you have, where you are.', author: 'Theodore Roosevelt' },
+    { text: 'The secret of getting ahead is getting started.', author: 'Mark Twain' },
+    { text: 'If you can dream it, you can do it.', author: 'Walt Disney' },
+    { text: 'Everything you can imagine is real.', author: 'Pablo Picasso' },
+    { text: 'You miss 100% of the shots you don’t take.', author: 'Wayne Gretzky' },
+    { text: 'Keep your eyes on the stars, and your feet on the ground.', author: 'Theodore Roosevelt' },
+    { text: 'But if you don’t change your direction, and if you keep looking, you may end up where you are heading.', author: 'VitePress' },
+    { text: 'PAGE NOT FOUND', author: 'VitePress' },
+    { text: 'This page has gone somewhere else.', author: 'the internet' },
+    { text: 'Maybe the page is still loading.', author: 'your browser' },
+    { text: '404: curiosity required.', author: 'the server' },
+    { text: 'You found a place where nothing was found.', author: '404' },
+    { text: 'Wrong page. Right direction.', author: 'unknown' },
+    { text: 'The page is missing. The search continues.', author: 'unknown' },
+    { text: 'There is probably something interesting around here.', author: 'unknown' }
   ];
 
   let quote = quotes[0];
