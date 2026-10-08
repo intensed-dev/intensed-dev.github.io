@@ -108,7 +108,9 @@
             inputmode="numeric"
             autocomplete="one-time-code"
             maxlength="6"
-            pattern="[0-9]{6}"
+            on:input={(event) => {
+              code = event.currentTarget.value.replace(/\D/g, '').slice(0, 6);
+            }}
             placeholder="000000"
             aria-label="Six-digit code"
             disabled={loading}
@@ -184,18 +186,27 @@
   button {
     width: 100%;
     box-sizing: border-box;
-    border: 1px solid #333;
-    background: #080808;
+    border: 1px solid #2a2a2a;
+    background: #050505;
     color: #fff;
-    border-radius: 0;
+    border-radius: 6px;
     font: inherit;
+    outline: none;
+    transition: border-color 160ms ease, background 160ms ease, box-shadow 160ms ease;
   }
 
   input {
+    min-height: 58px;
     padding: 1rem;
     text-align: center;
     font-size: 1.5rem;
     letter-spacing: 0.25em;
+  }
+
+  input:focus {
+    border-color: #666;
+    background: #0a0a0a;
+    box-shadow: 0 0 0 3px rgb(255 255 255 / 6%);
   }
 
   input::placeholder {
@@ -204,6 +215,7 @@
   }
 
   button {
+    min-height: 52px;
     padding: 0.9rem 1rem;
     cursor: pointer;
     opacity: 0.8;
@@ -214,7 +226,14 @@
 
   button:hover:not(:disabled) {
     opacity: 1;
-    border-color: #666;
+    border-color: #555;
+    background: #0b0b0b;
+  }
+
+  button:focus-visible {
+    border-color: #777;
+    box-shadow: 0 0 0 3px rgb(255 255 255 / 6%);
+    outline: none;
   }
 
   button:disabled {
