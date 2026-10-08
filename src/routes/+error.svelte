@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+  import { navigate } from '$lib/transition';
 
   const quotes = [
     { text: 'Not all those who wander are lost.', author: 'J.R.R. Tolkien' },
@@ -36,6 +37,11 @@
   onMount(() => {
     quote = quotes[Math.floor(Math.random() * quotes.length)];
   });
+
+  async function goBack(event: MouseEvent) {
+    event.preventDefault();
+    await navigate('/');
+  }
 </script>
 
 <svelte:head>
@@ -51,7 +57,7 @@
       <p>“{quote.text}”</p>
       <cite>— {quote.author}</cite>
     </blockquote>
-    <a href="/">go back <span aria-hidden="true">→</span></a>
+    <a href="/" on:click={goBack}>go back <span aria-hidden="true">→</span></a>
   </div>
 </main>
 
