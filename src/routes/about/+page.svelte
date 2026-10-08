@@ -1,14 +1,13 @@
 <script lang="ts">
   import { onMount } from 'svelte';
 
-  const text = `I’m Intense, a developer and creator who likes turning ideas into things that can actually be used. I spend a lot of time experimenting with software, games, interfaces and the small details that make a project feel like its own thing.
+  const API_URL = 'https://dein-worker.workers.dev';
 
-  Most of what I make starts as a simple idea and grows through experimentation. I enjoy learning by building, changing direction when something does not work, and keeping the final result as simple as it needs to be.
-
-  This space is intentionally open. It is a place for me to write about what I am working on, what I am interested in, and whatever else feels worth putting into words.`;
-
-  const words = text.split(/(\s+)/);
-
+  let code = '';
+  let loading = false;
+  let error = '';
+  let authenticated = false;
+  let text = '';
   let article: HTMLElement;
   let raf = 0;
 
@@ -20,7 +19,9 @@
 
     for (const span of spans) {
       const rect = span.getBoundingClientRect();
-      const distance = (rect.top + rect.height / 2 - viewportCenter) / (window.innerHeight * 0.42);
+      const distance =
+        (rect.top + rect.height / 2 - viewportCenter) /
+        (window.innerHeight * 0.42);
       const progress = Math.max(0, Math.min(1, 1 - distance));
       const opacity = 0.18 + progress * 0.82;
       const y = (1 - progress) * 18;
@@ -34,6 +35,42 @@
 
   function requestUpdate() {
     if (!raf) raf = requestAnimationFrame(updateWords);
+  }
+
+  async function verifyCode() {
+    error = '';
+
+    if (!/^\d{6}$/.test(code)) {
+      error = 'enter a six-digit code.';
+      return;
+    }
+
+    loading = true;
+
+    try {
+      const response = await fetch(API_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ code })
+      });
+
+      const data = await response.json();
+
+      if (!response.ok || !data.success) {
+        error = 'invalid code.';
+        return;
+      }
+
+      text = data.text;
+      authenticated = true;
+      code = '';
+    } catch {
+      error = 'could not connect to the server.';
+    } finally {
+      loading = false;
+    }
   }
 
   onMount(() => {
@@ -58,18 +95,48 @@
 </svelte:head>
 
 <main>
-  <article bind:this={article} aria-label="About Intense">
-    <h1>about me.</h1>
-    <div class="text">
-      {#each words as word, i (i)}
-        {#if /^\s+$/.test(word)}
-          {word}
-        {:else}
-          <span data-word style="--word-index: {i}">{word}</span>
+  {#if !authenticated}
+    <section class="lock">
+      <div class="lock-content">
+        <h1>about me.</h1>
+        <p>enter the six-digit code.</p>
+
+        <form on:submit|preventDefault={verifyCode}>
+          <input
+            bind:value={code}
+            type="text"
+            inputmode="numeric"
+            autocomplete="one-time-code"
+            maxlength="6"
+            pattern="[0-9]{6}"
+            placeholder="000000"
+            aria-label="Six-digit code"
+            disabled={loading}
+          />
+          <button type="submit" disabled={loading || code.length !== 6}>
+            {loading ? 'checking…' : 'continue →'}
+          </button>
+        </form>
+
+        {#if error}
+          <p class="error" role="alert">{error}</p>
         {/if}
-      {/each}
-    </div>
-  </article>
+      </div>
+    </section>
+  {:else}
+    <article bind:this={article} aria-label="About Intense">
+      <h1>about me.</h1>
+      <div class="text">
+        {#each text.split(/(\s+)/) as word, i (i)}
+          {#if /^\s+$/.test(word)}
+            {word}
+          {:else}
+            <span data-word style="--word-index: {i}">{word}</span>
+          {/if}
+        {/each}
+      </div>
+    </article>
+  {/if}
 </main>
 
 <style>
@@ -77,6 +144,88 @@
     min-height: 100svh;
     background: #000;
     color: #fff;
+  }
+
+  .lock {
+    min-height: 100svh;
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+  }
+
+  .lock-content {
+    width: min(620px, 100%);
+    text-align: center;
+  }
+
+  .lock h1 {
+    max-width: 950px;
+    margin: 0 0 0.25em;
+    font-size: clamp(3rem, 8vw, 8rem);
+    line-height: 0.94;
+    font-weight: 500;
+    letter-spacing: -0.055em;
+  }
+
+  .lock-content > p {
+    margin: 0 0 2rem;
+    opacity: 0.5;
+    font-size: 1rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: stretch;
+  }
+
+  input,
+  button {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #333;
+    background: #080808;
+    color: #fff;
+    border-radius: 0;
+    font: inherit;
+  }
+
+  input {
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    letter-spacing: 0.25em;
+  }
+
+  input::placeholder {
+    color: #fff;
+    opacity: 0.2;
+  }
+
+  button {
+    padding: 0.9rem 1rem;
+    cursor: pointer;
+    opacity: 0.8;
+    transition:
+      opacity 160ms ease,
+      border-color 160ms ease;
+  }
+
+  button:hover:not(:disabled) {
+    opacity: 1;
+    border-color: #666;
+  }
+
+  button:disabled {
+    cursor: default;
+    opacity: 0.3;
+  }
+
+  .error {
+    margin-top: 1rem !important;
+    color: #fff;
+    opacity: 0.65 !important;
   }
 
   article {
@@ -89,7 +238,7 @@
     text-wrap: pretty;
   }
 
-  h1 {
+  article h1 {
     max-width: 950px;
     margin: 0 0 0.6em;
     font-size: clamp(3rem, 8vw, 8rem);
