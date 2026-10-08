@@ -59,13 +59,16 @@
 
 <main>
   <article bind:this={article} aria-label="About Intense">
-    {#each words as word, i (i)}
-      {#if /^\s+$/.test(word)}
-        {word}
-      {:else}
-        <span data-word style="--word-index: {i}">{word}</span>
-      {/if}
-    {/each}
+    <h1>about me.</h1>
+    <div class="text">
+      {#each words as word, i (i)}
+        {#if /^\s+$/.test(word)}
+          {word}
+        {:else}
+          <span data-word style="--word-index: {i}">{word}</span>
+        {/if}
+      {/each}
+    </div>
   </article>
 </main>
 
@@ -84,6 +87,18 @@
     line-height: 1.35;
     letter-spacing: -0.035em;
     text-wrap: pretty;
+  }
+
+  h1 {
+    margin: 0 0 0.6em;
+    font-size: 0.55em;
+    line-height: 1;
+    font-weight: 500;
+    letter-spacing: -0.04em;
+  }
+
+  .text {
+    padding-inline: clamp(0.1rem, 0.45vw, 0.45rem);
   }
 
   article span {
