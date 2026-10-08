@@ -59,7 +59,7 @@
 
 <main>
   <article bind:this={article} aria-label="About Intense">
-    {#each words as word, i}
+    {#each words as word, i (i)}
       {#if /^\s+$/.test(word)}
         {word}
       {:else}
